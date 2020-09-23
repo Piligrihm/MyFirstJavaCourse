@@ -7,6 +7,8 @@ public class MySecondProgram{
 		Scanner scan = new Scanner(System.in);
 		String name = scan.nextLine();
 		
+		System.out.println("Я первый!");
+		
 		System.out.println("Hello !!!!!" + name);
 	}
 }
