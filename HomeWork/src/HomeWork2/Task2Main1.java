@@ -13,7 +13,7 @@ public class Task2Main1 {
         }
 
         // Выводим элементы массива, используя цикл do.......while
-        
+
         System.out.println("\nВыводим элементы массива, используя цикл do.....while\n");
         int x = 0;
         do {

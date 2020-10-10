@@ -20,7 +20,7 @@ public class Task4Main3 {
 
         // создание массива произвольной длины
         int[] arr = new int[length];
-        
+
         //заполнение массива произвольными значениями
         for (int i = 0; i < arr.length; i++) {
             arr[i] = rnd.nextInt();

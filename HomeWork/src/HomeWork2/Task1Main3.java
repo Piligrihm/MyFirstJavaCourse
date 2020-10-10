@@ -17,7 +17,7 @@ public class Task1Main3 {
             num1int = scanner.nextInt();
             num1 = (double) num1int;
 
-        // является ли числом с плавающей запятой
+            // является ли числом с плавающей запятой
         } else if (scanner.hasNextDouble()) {
             num1 = scanner.nextDouble();
 
@@ -29,24 +29,33 @@ public class Task1Main3 {
         }
         System.out.println("Введите степень - ");
 
-        if (scanner.hasNextInt()) {
-            num2 = scanner.nextInt();
+        boolean needIn = false;
 
-            if (num2 < 0) {
+        while (!needIn) {
+            if (scanner.hasNextInt()) {
+                num2 = scanner.nextInt();
+                if (num2 < 0) {
+                    System.out.println("Вы ввели недопустимое значение. Порпобуйте еще раз");
+                    scanner.next();
+                    num2 = 0;
+
+                }
+                needIn = true;
+            } else {
                 System.out.println("Вы ввели недопустимое значение. Порпобуйте еще раз");
                 scanner.next();
+
             }
-        } else {
-            System.out.println("Вы ввели недопустимое значение. Порпобуйте еще раз");
-            scanner.next();
+
         }
+
         // возводим в степень
         double res = 1;
         for (int i = 0; i < num2; i++) {
             res *= num1;
 
         }
-        System.out.println("num " + res);
+        System.out.println("Результат возведения в степень =>  " + (int) res);
 
     }
 

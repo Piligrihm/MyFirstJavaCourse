@@ -68,9 +68,9 @@ public class Task2Main3 {
                 (из двух меняемых местами эелементов массива) и присваваем ей значение второго*/
                 // таким образом меняем местами значение массива (инверсия)
 
-                int hold = arr[(arr.length - 1)];
+                int tempVar = arr[(arr.length - 1)];
                 arr[arr.length - 1] = arr[i];
-                arr[i] = hold;
+                arr[i] = tempVar;
             }
         }
         System.out.println("\nВыводим элементы массива, используя цикл foreach\n");
