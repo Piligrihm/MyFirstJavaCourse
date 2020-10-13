@@ -1,28 +1,34 @@
 package HomeWork3;
 
-public class CalculatorWithMathExtends extends CalculatorWithOperator{
+public class CalculatorWithMathExtends extends CalculatorWithOperator {
     @Override
-    public double slozhenie(double a, double b) {
-        return super.slozhenie(a, b);
+    public double addition(double a, double b) {
+        return super.addition(a, b);
     }
 
     @Override
-    public double vychitanie(double a, double b) {
-        return super.vychitanie(a, b);
-    }
-
-        @Override
-    public double umnozhenie(int a, double b) {
-        return super.umnozhenie(a, b);
+    public double subtraction(double a, double b) {
+        return super.subtraction(a, b);
     }
 
     @Override
-    public double delenie(float a, double b) {
-        return super.delenie(a, b);
+    public double multiplication(int a, double b) {
+        return super.multiplication(a, b);
     }
 
     @Override
-    public double vozvStepen(double a, int b) {
+    public double division(float a, double b) {
+        return super.division(a, b);
+    }
+
+    /*
+    операция возведения в степень (переопределяет родительский метод)
+     @param double a
+     @param int b
+     @ return а в степени b
+     */
+    @Override
+    public double powers(double a, int b) {
         for (int i = 1; i < b; i++) {
             if (a > 0) {
                 a = Math.pow(a, b);
@@ -33,13 +39,23 @@ public class CalculatorWithMathExtends extends CalculatorWithOperator{
         return a;
     }
 
+    /*
+     операция получения модуля числа (переопределяет родительский метод)
+     @param double a
+     @ return модуль числа а
+      */
     @Override
-    public double modul(double a) {
+    public double absolut(double a) {
         return Math.abs(a);
     }
 
+    /*
+     операция извлечения квадратного корня (переопределяет родительский метод)
+     @param double a
+     @ return квадратный корень числа а
+      */
     @Override
     public double sqrt(double a) {
         return Math.sqrt(a);
-      }
+    }
 }

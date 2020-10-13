@@ -2,23 +2,29 @@ package HomeWork3;
 
 public class CalculatorWithOperator {
 
-    public double slozhenie(double a, double b) {
+    public double addition(double a, double b) {
         return a + b;
-    }
+    } // оеперация сложения
 
-    public double vychitanie(double a, double b) {
+    public double subtraction(double a, double b) {
         return a - b;
-    }
+    } // операция вычитания
 
-    public double umnozhenie(int a, double b) {
+    public double multiplication(int a, double b) {
         return a * b;
-    }
+    } // операция умножения
 
-    public double delenie(float a, double b) {
+    public double division(float a, double b) {
         return a / b;
-    }
+    } // операция деления
 
-    public double vozvStepen(double a, int b) {
+    /*
+    операция возведения в степень
+     @param double a
+     @param int b
+     @ return а в степени b
+     */
+    public double powers(double a, int b) {
         for (int i = 1; i < b; i++) {
             if (a > 0) {
                 a *= a;
@@ -28,14 +34,23 @@ public class CalculatorWithOperator {
         }
         return (int) a;
     }
-
-    public double modul(double a) {
+    /*
+     операция получения модуля числа
+     @param double a
+     @ return модуль числа а
+      */
+    public double absolut(double a) {
         if (a <= 0.0) {
             a = 0.0 - a;
         }
         return a;
     }
 
+    /*
+     операция извлечения квадратного корня
+     @param double a
+     @ return квадратный корень числа а
+      */
     public double sqrt(double a) {
         return Math.sqrt(a);
     }
