@@ -1,6 +1,7 @@
 package HomeWork3;
 
-public class CalculatorWithOperator {
+public class CalculatorWithOperator implements ICalculator{
+
 
     public double addition(double a, double b) {
         return a + b;
@@ -10,11 +11,11 @@ public class CalculatorWithOperator {
         return a - b;
     } // операция вычитания
 
-    public double multiplication(int a, double b) {
+    public double multiplication(double a, double b) {
         return a * b;
     } // операция умножения
 
-    public double division(float a, double b) {
+    public double division(double a, double b) {
         return a / b;
     } // операция деления
 

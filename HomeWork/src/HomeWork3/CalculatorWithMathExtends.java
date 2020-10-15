@@ -1,25 +1,6 @@
 package HomeWork3;
 
-public class CalculatorWithMathExtends extends CalculatorWithOperator {
-    @Override
-    public double addition(double a, double b) {
-        return super.addition(a, b);
-    }
-
-    @Override
-    public double subtraction(double a, double b) {
-        return super.subtraction(a, b);
-    }
-
-    @Override
-    public double multiplication(int a, double b) {
-        return super.multiplication(a, b);
-    }
-
-    @Override
-    public double division(float a, double b) {
-        return super.division(a, b);
-    }
+public class CalculatorWithMathExtends extends CalculatorWithOperator implements ICalculator {
 
     /*
     операция возведения в степень (переопределяет родительский метод)
@@ -50,7 +31,8 @@ public class CalculatorWithMathExtends extends CalculatorWithOperator {
     }
 
     /*
-     операция извлечения квадратного корня (переопределяет родительский метод)
+     операция извлечения квадратного корня (переопределяет родительский метод)+
+
      @param double a
      @ return квадратный корень числа а
       */

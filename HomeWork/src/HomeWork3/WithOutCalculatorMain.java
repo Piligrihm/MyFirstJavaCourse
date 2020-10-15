@@ -9,7 +9,7 @@ public class WithOutCalculatorMain {
         double e = 5.f;
         int f = 2;
 
-        System.out.println("4.1+15*7+(28/5)^2 = " + (a + b * c + (double)(d/e)*(d/e))); //140.46
+        System.out.println("4.1+15*7+(28/5)^2 = " + (a + b * c + (double)(d/e)*(d/e))); //140.459
 
 
 

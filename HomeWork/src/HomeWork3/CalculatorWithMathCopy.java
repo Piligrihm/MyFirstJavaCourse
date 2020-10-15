@@ -1,28 +1,25 @@
 package HomeWork3;
 
-public class CalculatorWithMathCopy {
-    public double slozhenie(double a, double b) {
+public class CalculatorWithMathCopy implements ICalculator{
+    public double addition(double a, double b) {
         return a + b;
     }
 
-    public double vychitanie(double a, double b) {
+    public double subtraction(double a, double b) {
         return a - b;
     }
 
-    public double umnozhenie(int a, double b) {
+    public double multiplication(double a, double b) {
         return a * b;
     }
 
-    public double delenie(int a, double b) {
-        return a / b;
-    }
+    public double division(double a, double b) { return a / b; }
 
-
-    public double vozvStepen(double a, int b) {
+    public double powers(double a, int b) {
          return Math.pow(a,b);
     }
 
-    public double modul(double a) {
+    public double absolut(double a) {
            return Math.abs(a);
     }
 
