@@ -5,8 +5,7 @@ import java.util.Arrays;
 public class Task6Main1 {
     public static void main(String[] args) {
 
-        createPhoneNumber(new int[]{1, 2, 3, 4, 5, 6, 7, 8, 9, 0});
-        
+
         System.out.println(createPhoneNumber(new int[]{1, 2, 3, 4, 5, 6, 7, 8, 9, 0})); //вывод отформатированного результата
 
     }
