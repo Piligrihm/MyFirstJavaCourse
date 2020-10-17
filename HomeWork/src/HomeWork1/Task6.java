@@ -7,6 +7,8 @@ public class Task6 {
 
         createPhoneNumber(new int[]{1, 2, 3, 4, 5, 6, 7, 8, 9, 0});
 
+        System.out.println(createPhoneNumber(new int[]{1, 2, 3, 4, 5, 6, 7, 8, 9, 0})); //вывод отформатированного результата
+
     }
 
     public static String createPhoneNumber(int[] numbers) {
@@ -18,9 +20,6 @@ public class Task6 {
         // Добавляем скобки и тире в нужных местах. Фактически сотавляю новую строку из нужных символов и кусочков старой строки
 
         String result = "(" + numberFromArray.substring(0, 3) + ") " + numberFromArray.substring(3, 6) + "-" + numberFromArray.substring(6, 10);
-
-        System.out.println(result);
-
 
         return result;
     }

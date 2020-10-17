@@ -6,6 +6,7 @@ public class Task1 {
         int positiveB = 15;
         int negativeA = -42;
         int negativeB = -15;
+        double doubVar = 42.5;
 
         // Переводим переменные в двоичный код и ограничиваем кол-во символов до 8-ми
 
@@ -31,6 +32,24 @@ public class Task1 {
         System.out.println("Число 15 в двоичной системе " + convert2);
         System.out.println("Число -42 в двоичной системе " + strValue3);
         System.out.println("Число -15 в двоичной системе " + strValue4);
+
+        // double в двоичный код
+
+        double d = 42.5;
+        String sResult = "";
+        long numberBits = Double.doubleToLongBits(d);
+        System.out.println("qqqqqqqqqqqqqqqqqqqqqq    "+ numberBits );
+
+        sResult = Long.toBinaryString(numberBits);
+        System.out.println("\nПредставление вещественного числа в формате чисел с плавающей точкой");
+
+        System.out.format("Число: %5.2f\n", d);
+        System.out.println("Формат чисел с плавающей точкой:");
+
+        //ведущий ноль заботливо сокращен системой, поэтому его нужно восстановить
+
+        System.out.println(d > 0 ? "0" + sResult : sResult);
+
 
         int pozRezult1 = positiveA |= positiveB;
 
