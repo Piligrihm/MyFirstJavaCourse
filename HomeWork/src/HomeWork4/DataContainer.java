@@ -9,7 +9,11 @@ public class DataContainer<T> {
     private T item;
     private T[] data;
 
-
+    /**
+     * Метод toString - мереопределние метода toString класса Object (используем StringBuilder)
+     * @param - не принимает параметров
+     * @return возвращает строку
+     */
     public DataContainer(T[] data) {
         this.data = data;
     }
@@ -21,7 +25,11 @@ public class DataContainer<T> {
 
     int index = 0;
     int index1;
-
+    /**
+     * Метод add добавляет элемент в массив
+     * @param item - принимаемое значение
+     * @return вернет индекс добавленного элемента
+     */
     public int add(T item) {
 
         if (item != null) {
@@ -39,6 +47,11 @@ public class DataContainer<T> {
         return index1;
     }
 
+    /**
+     * Метод T get получает из поля Data предварительно переданный объект
+     * @param index - принимаемый индекс элемента
+     * @return возвращает объект (значение элемента массива). Если элемент - null, то вернет "null"
+     */
     public T get(int index) {
         if (index >= 0 & index < data.length) {
             return data[index];
@@ -46,16 +59,28 @@ public class DataContainer<T> {
             return null;
         }
     }
-
+    /**
+     * Метод T[] getItems получает объекты поля Data
+     * @param - не принимает никаких параметров
+     * @return возвращает поле Data
+     */
     public T[] getItems() {
         return data;
     }
-
+    /**
+     * Метод printLastIndex - тестовый метод
+     * @param - не принимает никаких параметров
+     * @return возвращает void. Выводит индекс последнего переданного элемента в консоль
+     */
     public void printLastIndex() {
         System.out.println("Last added index = " + index1);
     }
 
-
+    /**
+     * Метод delete - удаляет элемент массива по заданному индексу
+     * @param - принимает парметр - индекс эелемента
+     * @return true, если удалось удалить элемент. Если нет - false
+     */
     public boolean delete(int index) {
         boolean var;
         if (index == 0) {
@@ -93,7 +118,11 @@ public class DataContainer<T> {
         }
         return var;
     }
-
+    /**
+     * Метод delete - удаляет элемент массива по заданному значению
+     * @param - принимает парметр - значение эелемента
+     * @return true, если удалось удалить элемент. Если нет - false
+     */
     public boolean delete(T item) {
         int i = 0;
         for (T element : data) {
@@ -107,7 +136,12 @@ public class DataContainer<T> {
 
     }
 
-
+    /**
+     * Метод sort - сортирует данные, записанные в поле дата (сортирует элементы массива)
+     * использует шейкерную сортировку
+     * @param - принимает объект реализации сортировки Comparator
+     * @return возвращает void
+     */
     public void sort(Comparator<T> comparator) {
         if (comparator != null & data.length > 1) {
             T tempVar;
@@ -140,7 +174,11 @@ public class DataContainer<T> {
 
         }
     }
-
+    /**
+     * Метод toString - мереопределние метода toString класса Object (используем контактенацию строк)
+     * @param - не принимает параметров
+     * @return возвращает строку
+     */
     /*@Override
     public String toString() {
         String str = "[";
@@ -161,6 +199,11 @@ public class DataContainer<T> {
         return str;
     }*/
 
+    /**
+     * Метод toString - мереопределние метода toString класса Object (используем StringBuilder)
+     * @param - не принимает параметров
+     * @return возвращает строку
+     */
     @Override
     public String toString() {
         boolean var = false;
