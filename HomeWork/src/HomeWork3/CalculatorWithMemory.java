@@ -61,7 +61,7 @@ public class CalculatorWithMemory {
 
     }
 
-    public double multiplication(int a, double b) {
+    public double multiplication(double a, double b) {
         this.incrementCount();
         if (this.calc1 != null) {
             memory = calc1.multiplication(a, b);
@@ -76,7 +76,7 @@ public class CalculatorWithMemory {
 
     }
 
-    public double division(float a, double b) {
+    public double division(double a, double b) {
         this.incrementCount();
         if (this.calc1 != null) {
             memory = calc1.division(a, b);
@@ -135,10 +135,12 @@ public class CalculatorWithMemory {
     public long getCountOperation() {
         return counter;
     }
-    public void writeMemory(){
+
+    public void writeMemory() {
 
     }
-    public double getMemory(CalculatorWithOperator calculator){
+
+    public double getMemory(CalculatorWithOperator calculator) {
         return memory;
     }
 }

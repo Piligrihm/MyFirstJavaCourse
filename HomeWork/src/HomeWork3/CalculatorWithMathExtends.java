@@ -4,10 +4,11 @@ public class CalculatorWithMathExtends extends CalculatorWithOperator implements
 
     /*
     операция возведения в степень (переопределяет родительский метод)
-     @param double a
-     @param int b
-     @ return а в степени b
-     */
+    @param double a
+    @param int b
+    @ return а в степени b
+    */
+
     @Override
     public double powers(double a, int b) {
         for (int i = 1; i < b; i++) {
@@ -21,21 +22,22 @@ public class CalculatorWithMathExtends extends CalculatorWithOperator implements
     }
 
     /*
-     операция получения модуля числа (переопределяет родительский метод)
-     @param double a
-     @ return модуль числа а
-      */
+    операция получения модуля числа (переопределяет родительский метод)
+    @param double a
+    @ return модуль числа а
+    */
+
     @Override
     public double absolut(double a) {
         return Math.abs(a);
     }
 
     /*
-     операция извлечения квадратного корня (переопределяет родительский метод)+
+    операция извлечения квадратного корня (переопределяет родительский метод)+
+    @param double a
+    @ return квадратный корень числа а
+    */
 
-     @param double a
-     @ return квадратный корень числа а
-      */
     @Override
     public double sqrt(double a) {
         return Math.sqrt(a);
