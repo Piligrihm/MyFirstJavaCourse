@@ -10,9 +10,18 @@ public class EasySearch implements ISearchEngine {
     */
 
     public long search(String text, String word) {
-        return 0;
-    }
+        text = text.toLowerCase(); // переводит текст в нижний регистр
+        word = word.toLowerCase(); // переводит слово в нижний регистр
+        long counter = 0;
+        int i = 0;
 
+        while (i != -1) {
+
+            i = text.indexOf(" " + word + " ", i+1);
+            counter++;
+        }
+        return counter;
+    }
 
 
 }

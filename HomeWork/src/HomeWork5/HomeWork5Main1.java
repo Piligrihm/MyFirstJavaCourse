@@ -31,8 +31,9 @@ public class HomeWork5Main1 {
         String[] s = str.split(" +");
         System.out.println(s.length);
 
+
         Set<String> uniq = new TreeSet<>(Arrays.asList(s));
-      //  System.out.println(uniq);
+        //System.out.println(uniq);
 
 
         Map<String, Integer> top = new HashMap<>();
@@ -41,14 +42,28 @@ public class HomeWork5Main1 {
         }
 
 
-
-
-       //сортировка коллекции по значениям (по возратсанию)
-        top.entrySet().stream()
+        //сортировка коллекции по значениям (по возрастанию)
+        Map<String, Integer> top1 = top.entrySet().stream()
                 .sorted(Map.Entry.<String, Integer>comparingByValue().reversed()).limit(10)
-                 .forEach(System.out::println);
+                .collect(LinkedHashMap::new, (m, c) -> m.put(c.getKey(), c.getValue()),
+                        LinkedHashMap::putAll);
 
+        // Вывод топ-10 слов
+        for (Map.Entry<String, Integer> entry : top1.entrySet()) {
+            System.out.println(entry);
 
+        }
+        ;
+        EasySearch easySearch = new EasySearch();
+        System.out.println("easySearch - кол-во упоминаний слова 'война' - " + easySearch.search(str, "война"));
+        System.out.println("easySearch - кол-во упоминаний слова 'и' - " + easySearch.search(str, "и"));
+        System.out.println("easySearch - кол-во упоминаний слова 'мир' - " + easySearch.search(str, "мир"));
+
+        RegExSearch regExSearch = new RegExSearch();
+        System.out.println("regExSearch - кол-во упоминаний слова 'война' - " + regExSearch.search(str, "война"));
+        System.out.println("regExSearch - кол-во упоминаний слова 'и' - " + regExSearch.search(str, "и"));
+        System.out.println("regExSearch - кол-во упоминаний слова 'мир' - " + regExSearch.search(str, "мир"));
     }
+
 
 }
