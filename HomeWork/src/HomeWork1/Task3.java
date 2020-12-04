@@ -1,6 +1,5 @@
 package HomeWork1;
 
-import javax.sound.midi.Soundbank;
 
 public class Task3 {
     public static void main(String[] args) {

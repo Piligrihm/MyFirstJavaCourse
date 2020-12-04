@@ -12,10 +12,7 @@ public class HomeWork5Main1 {
             int read;
             while ((read = reader.read()) > -1) {
                 builder.append((char) read);
-
             }
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
         }
