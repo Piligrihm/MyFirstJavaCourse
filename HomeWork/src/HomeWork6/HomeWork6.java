@@ -35,23 +35,41 @@ public class HomeWork6 {
 
         MyCallable callable = new MyCallable(str, "война");
         try {
-            System.out.println("Кол-во упоминаний слова 'мир' - " + callable.call());
+            System.out.println("Кол-во упоминаний слова 'война' - " + callable.call());
         } catch (Exception e) {
             e.printStackTrace();
         }
 
         StringSplitter splitter = new StringSplitter();
-        ArrayList<String> parts = splitter.textForParts(str, 6);
+        ArrayList<String> parts = splitter.textForParts(str, 1000);
 
         System.out.println("------------------------------------");
-        int result = 0;
-        ExecutorService executor = Executors.newFixedThreadPool(2);
 
-        for (String sublist : parts) {
-            MyCallable callabl = new MyCallable(sublist, "война");
-            Future<Integer> future = executor.submit(callabl);
-            System.out.println(future.get());
+        ExecutorService executor = Executors.newFixedThreadPool(3);
+        Future <Long> firstWord;
+        Future <Long> secondWord;
+        Future <Long> thirdWord;
+        Long count1 = 0L;
+        Long count2 = 0L;
+        Long count3 = 0L;
+
+
+        for (String part : parts) {
+            MyCallable callabl = new MyCallable(part, "война");
+            MyCallable callable1 = new MyCallable(part, "и");
+            MyCallable callable2 = new MyCallable(part, "мир");
+            firstWord = executor.submit(callabl);
+            secondWord = executor.submit(callable1);
+            thirdWord = executor.submit(callable2);
+            count1 += firstWord.get();
+            count2 += secondWord.get();
+            count3 += thirdWord.get();
+
+
         }
+        System.out.println("Слово 'война' встречается в тексте " + count1);
+        System.out.println("Слово 'и' встречается в тексте " + count2);
+        System.out.println("Слово 'мир' встречается в тексте " + count3);
 
         executor.shutdown();
 
